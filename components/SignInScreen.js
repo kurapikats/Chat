@@ -4,6 +4,7 @@ import {
   Text,
   TouchableOpacity,
   StyleSheet,
+  Linking,
   TextInput
 } from 'react-native'
 
@@ -20,9 +21,18 @@ const SignInScreen = (props) => (
         <Text style={styles.actionButtonText}>Go</Text>
       </TouchableOpacity>
     </View>
-    <Text style={styles.externalLink}>Forgot your account number?</Text>
+    <Text
+      style={styles.externalLink}
+      onPress={openHelpPage}
+    >
+      Forgot your account number?
+    </Text>
   </View>
 )
+
+function openHelpPage() {
+  Linking.openURL('https://www.google.com/')
+}
 
 const styles = StyleSheet.create({
   container: {
