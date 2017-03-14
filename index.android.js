@@ -3,13 +3,12 @@ import {
   AppRegistry
 } from 'react-native';
 
-import MainScreen from './components/MainScreen'
-import SignInScreen from './components/SignInScreen'
+import App from './components/App'
 
 export default class chat extends Component {
   render() {
     return (
-      <SignInScreen />
+      <App />
     );
   }
 }
