@@ -8,6 +8,7 @@ import {
 import routes from '../routes'
 import MainScreen from './MainScreen'
 import SignInContainer from '../containers/SignInContainer'
+import ChatContainer from '../containers/ChatContainer'
 import NavBarRouteMapper from './NavBarRouteMapper'
 
 class App extends Component {
@@ -15,6 +16,8 @@ class App extends Component {
     switch (route.name) {
       case 'SignInScreen':
         return <SignInContainer />
+      case 'ChatScreen':
+        return <ChatContainer />
       case 'MainScreen':
       default:
         return (
@@ -30,7 +33,7 @@ class App extends Component {
   render() {
     return (
       <Navigator
-        initialRoute={routes.main}
+        initialRoute={routes.chat}
         renderScene={this._renderScene}
         style={styles.container}
         sceneStyle={styles.sceneContainer}
